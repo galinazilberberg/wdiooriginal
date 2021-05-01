@@ -11,8 +11,8 @@ describe('Auth', () => {
     });
 
     it('user logs in with valid data', () => {
-        LoginPage.setLogin('yinyangyogaloft@gmail.com');
-        LoginPage.setPassword('Vladimir2020pasv');
+        LoginPage.setLogin(process.env.LOGIN);
+        LoginPage.setPassword(process.env.PASSWORD);
         LoginPage.clickSubmitButton();
         ProfilePage.isOpen();
     });
